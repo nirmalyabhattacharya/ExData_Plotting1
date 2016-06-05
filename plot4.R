@@ -32,7 +32,7 @@ with(power_consumption, {plot(date_time, Global_active_power, type = "n", xlab =
     with(power_consumption, points(date_time, Sub_metering_1, type = "l"))
     with(power_consumption, points(date_time, Sub_metering_2, type = "l", col = "red"))
     with(power_consumption, points(date_time, Sub_metering_3, type = "l", col = "blue"))
-    legend("topright", pch = "\u2014", col = c("black", "red", "blue"), legend = c("Sub_metering_1", "Sub_metering_2", "Sub_metering_3"))          
+    legend("topright",  lty=1, lwd=2.7, col = c("black", "red", "blue"), legend = c("Sub_metering_1", "Sub_metering_2", "Sub_metering_3"))         
     plot(date_time, Voltage, type = "n", xlab = "datetime")
     axis(1, at=c(as.numeric(min(power_consumption$date_time)), as.numeric(min(power_consumption$date_time))+86400
         , as.numeric(min(power_consumption$date_time))+2*86400), labels=c("Thu", "Fri", "Sat"))
